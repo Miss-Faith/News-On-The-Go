@@ -1,10 +1,11 @@
-class News_Source:
+class Source:
     '''
-    News_Source class to define News_Source
+    Source class to define News Source
     '''
 
-    def __init__(self,source,title,description,url,urlToImage,publishedAt):
-        self.source =source
+    def __init__(self,id,name,title,description,url,urlToImage,publishedAt):
+        self.id =id
+        self.name =name
         self.title = title
         self.description = description
         self.url = url
