@@ -10,7 +10,7 @@ class SourceTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_source = Source("","WISHTV.com","Monday's business headlines - WISH TV Indianapolis, IN","INDIANAPOLIS (WISH) — Heres a look at Mondays business headlines […]","https://www.wishtv.com/news/business/mondays-business-headlines-187/","https://www.wishtv.com/wp-content/uploads/2022/05/GettyImages-1239968068.jpg","2022-05-02T13:41:58Z")
+        self.new_source = Source("abc-news","ABC News","Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.","https://abcnews.go.com","general")
 
     def test_instance(self):
         '''
