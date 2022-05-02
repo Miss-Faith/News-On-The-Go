@@ -14,8 +14,11 @@ class Article:
 
     all_articles = []
 
-    def __init__(self,movie_id,title,imageurl,review):
-        self.movie_id = movie_id
+    def __init__(self,source_id,source_name,,author,title,description,url,imageurl):
+        self.source_id = source_id
+        self.source_name = source_name
+        self.author = author
         self.title = title
-        self.imageurl = imageurl
-        self.review = review
+        self.description = description
+        self.url = url
+        self.urlToImage = urlToImage
