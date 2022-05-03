@@ -32,9 +32,9 @@
        {% for source in source_list %}
         <div class="card col-2 card-index">
           <ul class="list-group list-group-flush">
-            <p>
-              <a href="/articles/{{source.id}}">{{ source.name }}</a>
-            </p>
+              <a href="/articles/{{source.id}}">
+                <p class="link">{{ source.name }}</p>
+              </a>
           </ul>
         </div>
       {% endfor %}

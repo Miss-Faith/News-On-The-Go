@@ -1,22 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
-body {
-  background-color: #81523f;
+div {
+  background-color:#d3d4d9;
 }
 
 p {
+  margin-top: 20px;
+  padding-top: 2px;
+  margin-bottom: 2px;
   font-family: 'Courgette', cursive;
-  background-color: #ebd2be;
+  background-color:#dcb693;
+}
+
+.link {
+  margin-top: 10px;
+  font-family: 'Courgette', cursive;
+}
+
+.link:hover {
+  font-family: 'Courgette', cursive;
 }
 
 a {
+  background-color: #ebd2be;
   color: #3f2a2b !important;
   text-decoration: none !important
 }
 
-
 a:hover {
-  color:104f55 !important;
+  background-color: #d5945e;
+  color:#104f55 !important;
 }
 .card-index{
   margin-left: 10px;
@@ -24,7 +37,14 @@ a:hover {
   background-color: antiquewhite;
   color: aqua;
 }
-.card-index.p{
-  color: bisque;
+
+.col-2 {
+  height: 6.4vh;
+  width: auto;
+}
+
+.card-article {
+  padding-left: 20px;
+
 }
 
