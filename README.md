@@ -94,9 +94,9 @@ To run test cases:
 * Python
 * CSS
 * HTML
-###Other resources
-*[Coolors](https://coolors.co/)
-*[Google Fonts](https://fonts.google.com/)
+### Other resources
+* [Coolors](https://coolors.co/)
+* [Google Fonts](https://fonts.google.com/)
 
 
 ## Development
