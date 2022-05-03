@@ -53,7 +53,7 @@ def process_results(source_list):
         url = source_item.get('url')
         category = source_item.get('category')
 
-        if name:
+        if id:
             source_object = Source(id,name,description,url,category)
             source_results.append(source_object)
 
@@ -86,16 +86,16 @@ def process_article_results(article_list):
     '''
     article_results = []
     for article_item in article_list:
-        id = article_item.get('id')
-        name = article_item.get('name')
+        source = article_item.get('source')
         author = article_item.get('author')
         title = article_item.get('title')
         description = article_item.get('description')
         url = article_item.get('url')
         urlToImage = article_item.get('urlToImage')
+        publishedAt = article_item.get('publishedAt')
 
-        if url:
-            article_object = Article(id,name,author,title,description,url,urlToImage)
+        if urlToImage:
+            article_object = Article(source,author,title,description,url,urlToImage,publishedAt)
             article_results.append(article_object)
 
     return article_results

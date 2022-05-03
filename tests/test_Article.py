@@ -10,7 +10,7 @@ class ArticleTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_article = Article("cnn","CNN","Rocío Muñoz-Ledo","Gustavo Petro suspende campaña en el eje cafetero por razones de seguridad","En Colombia, el candidato presidencial Gustavo Petro suspendió las actividades de este martes y miércoles en Quindío y Risaralda por seguridad","https://cnnespanol.cnn.com/2022/05/02/colombia-petro-suspende-campana-eje-cafetero-razones-seguridad-orix/","https://cnnespanol.cnn.com/wp-content/uploads/2022/05/gustavo-petro.jpg?quality=100&strip=info")
+        self.new_article = Article("id & name","Rocío Muñoz-Ledo","Gustavo Petro suspende campaña en el eje cafetero por razones de seguridad","En Colombia, el candidato presidencial Gustavo Petro suspendió las actividades de este martes y miércoles en Quindío y Risaralda por seguridad","https://cnnespanol.cnn.com/2022/05/02/colombia-petro-suspende-campana-eje-cafetero-razones-seguridad-orix/","https://cnnespanol.cnn.com/wp-content/uploads/2022/05/gustavo-petro.jpg?quality=100&strip=info","2022-05-03T10:20:01Z")
 
     def test_instance(self):
         '''

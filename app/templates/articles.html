@@ -12,10 +12,10 @@
   <h1 class="text-capitalize"> {{name}} </h3>
     <div class="container">
       <div class="card-columns">
-        {% for article in article_list %}
-  
+      {% for article in article_list %}
         <div class="card">
-          <img class="card" src="{{article.image}}" alt="News Image">
+          <h3>{{article.title}}</h3>
+          <img class="card" src="{{article.urlToImage}}" alt="News Image">
           <div class="card-body">
             <h5 class="card-title">{{article.author}}</h5>
             <p class="card-text">{{article.description}}</p>
@@ -24,7 +24,7 @@
             </a>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Article date:{{article.time}}</small>
+            <small class="text-muted">Article date:{{article.publishedAt}}</small>
           </div>
         </div>
         {% endfor %}
