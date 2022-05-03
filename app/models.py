@@ -12,9 +12,9 @@ class Source:
 
 class Article:
 
-    all_articles = []
+    #all_articles = []
 
-    def __init__(self,source_id,source_name,,author,title,description,url,imageurl):
+    def __init__(self,source_id,source_name,author,title,description,url,urlToImage):
         self.source_id = source_id
         self.source_name = source_name
         self.author = author
