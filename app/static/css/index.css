@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+body {
+  background-color: #81523f;
+}
+
+p {
+  font-family: 'Courgette', cursive;
+  background-color: #ebd2be;
+}
+
+a {
+  color: #3f2a2b !important;
+  text-decoration: none !important
+}
+
+
+a:hover {
+  color:104f55 !important;
+}
+.card-index{
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: antiquewhite;
+  color: aqua;
+}
+.card-index.p{
+  color: bisque;
+}
+

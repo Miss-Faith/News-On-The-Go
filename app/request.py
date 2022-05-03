@@ -31,7 +31,7 @@ def get_source():
         if get_source_response['sources']:
             source_results_list = get_source_response['sources']
             source_results = process_results(source_results_list)
-            print(source_results_list)
+            #print(source_results_list)
 
     return source_results
 
@@ -98,17 +98,3 @@ def process_article_results(article_list):
 
     return article_results
 
-# def search_article(source_name):
-#     get_searchbysource_url  = search_url.format(source_name,api_key)
-#     #print(get_search_url)
-#     with urllib.request.urlopen(get_searchbysource_url) as url:
-#         get_search_article_data = url.read()
-#         get_search_article_response = json.loads(get_search_article_data)
-
-#         search_article_results = None
-
-#         if get_search_article_response['articles']:
-#             search_article_results_list = get_search_article_response['articles']
-#             search_article_results = process_article_results(search_article_results_list)
-
-#     return article_results
