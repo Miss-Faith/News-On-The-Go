@@ -14,11 +14,14 @@ class ArticleTest(unittest.TestCase):
 
     def test_instance(self):
         '''
-        Test to check creation of new article Source instance
+        Test to check creation of new article instance
         '''
         self.assertTrue(isinstance(self.new_article,Article))
 
     def test_save_article(self):
+        '''
+        Test to check if instance variables are saved
+        '''
         self.new_article.save_article()
         self.assertTrue(len(Article.all_articles),1)
 
