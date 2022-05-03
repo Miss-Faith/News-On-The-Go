@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% block content %}
+  <h1 class="text-capitalize"> {{name}} </h3>
+    <div class="container">
+      <div class="card-columns">
+        {% for article in article_list %}
+  
+        <div class="card">
+          <img class="card" src="{{article.image}}" alt="News Image">
+          <div class="card-body">
+            <h5 class="card-title">{{article.author}}</h5>
+            <p class="card-text">{{article.description}}</p>
+            <a href="{{article.url}}">
+              <p class="card-text">read...</p>
+            </a>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Article date:{{article.time}}</small>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endblock %}
+</body>
+</html>

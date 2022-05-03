@@ -14,9 +14,9 @@ class Article:
 
     all_articles = []
 
-    def __init__(self,source_id,source_name,author,title,description,url,urlToImage):
-        self.source_id = source_id
-        self.source_name = source_name
+    def __init__(self,id,name,author,title,description,url,urlToImage):
+        self.id = id
+        self.name = name
         self.author = author
         self.title = title
         self.description = description

@@ -1,5 +1,5 @@
 import urllib.request,json
-from .models import Source
+from .models import Source,Article
 
 # Getting api key
 api_key = None
@@ -33,7 +33,6 @@ def get_source():
             source_results = process_results(source_results_list)
             #print(source_results_list)
 
-
     return source_results
 
 def process_results(source_list):
@@ -59,3 +58,44 @@ def process_results(source_list):
             source_results.append(source_object)
 
     return source_results
+
+def get_article(id):
+    get_search_url  = search_url.format(id,api_key)
+    print(get_search_url)
+    with urllib.request.urlopen(get_search_url) as url:
+        get_article_data = url.read()
+        get_article_response = json.loads(get_article_data)
+
+        article_results = None
+
+        if get_article_response['articles']:
+            article_results_list = get_article_response['articles']
+            article_results = process_article_results(article_results_list)
+
+    return article_results
+
+def process_article_results(article_list):
+    '''
+    Function  that processes the news articles and transform them to a list of Objects
+
+    Args:
+        article_list: A list of dictionaries that contain article details
+
+    Returns :
+        articles_results: A list of source objects
+    '''
+    article_results = []
+    for article_item in article_list:
+        id = article_item.get('id')
+        name = article_item.get('name')
+        author = article_item.get('author')
+        title = article_item.get('title')
+        description = article_item.get('description')
+        url = article_item.get('url')
+        urlToImage = article_item.get('urlToImage')
+
+        if url:
+            article_object = Article(id,name,author,title,description,url,urlToImage)
+            article_results.append(article_object)
+
+    return article_results
