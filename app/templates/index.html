@@ -1,5 +1,5 @@
 {% extends 'base.html'%}
-{% import 'macros.html' as macro%}
+<!-- {% import 'macros.html' as macro%} -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,17 +10,15 @@
     <!-- <title>News on the Go</title> -->
 </head>
 <body>
-  {% block content %}
+{% block content %}
   <h3> News Sources</h3>
     {% for source in source_list %}
-    <div> 
       <li>
-        <a href="/article/{{source.id}}">
-          {{ source.name }}
+        <a href="/articles/{{source.id}}">
+          <p>{{ source.name }}</p>
         </a>
       </li>
-    </div>
-  {% endfor %}
-  {% endblock%}
+    {% endfor %}
 </body>
+{% endblock%}
 </html>
