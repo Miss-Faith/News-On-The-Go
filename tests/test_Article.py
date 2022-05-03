@@ -18,6 +18,10 @@ class ArticleTest(unittest.TestCase):
         '''
         self.assertTrue(isinstance(self.new_article,Article))
 
+    def test_save_article(self):
+        self.new_article.save_article()
+        self.assertTrue(len(Article.all_articles),1)
+
 
 if __name__ == '__main__':
     unittest.main()
