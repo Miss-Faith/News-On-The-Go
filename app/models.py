@@ -12,7 +12,7 @@ class Source:
 
 class Article:
 
-    #all_articles = []
+    all_articles = []
 
     def __init__(self,source_id,source_name,author,title,description,url,urlToImage):
         self.source_id = source_id
@@ -22,3 +22,6 @@ class Article:
         self.description = description
         self.url = url
         self.urlToImage = urlToImage
+
+    def save_article(self):
+        Article.all_articles.append(self)
